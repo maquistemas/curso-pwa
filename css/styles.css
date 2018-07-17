@@ -19,3 +19,43 @@ body{
     width: 85%;
     margin: 0px auto;
 }
+
+/*CABECERA*/
+
+ #main-header{
+     background: white;
+     height: 100px;
+     line-height: 85px;
+ }
+
+ #logo{
+     width: 63%;
+     float: left;
+ }
+
+ #logo h1{
+    font-weight: bold;
+    font-size: 25px;
+    color: #FB314E;
+ }
+
+ #menu{
+     width: 380px;
+     float: left;
+ }
+
+ #menu ul li{
+     list-style: none;
+     float: left;
+     margin-left: 18px;
+     margin-right: 18px;
+
+ }
+
+ #menu ul li a{
+     color: black;
+ }
+
+ #menu ul li a:hover{
+     color: #FB314E;
+ }
