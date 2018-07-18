@@ -1,9 +1,9 @@
 {
-    "name": "Víctor Robles PWA",
-    "short_name": "maquistemas PWA",
+    "name": "Maquistemas PWA",
+    "short_name": "MQTMS PWA",
     "description": "Aplicaciones PWA del curso de responsive y aplicaciones web",
     "background_color": "#FFF",
-    "theme_color": "FB314E",
+    "theme_color": "#FB314E",
     "orientation": "portrait",
     "display": "standalone",
     "start_url": "./index.html?utm_source=web_app_manifest",
