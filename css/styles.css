@@ -154,6 +154,17 @@ body{
         transform: scale(1.1, 1.1);
     }
 
+    /*.container-1{
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-2{
+        display: table-cell;
+        vertical-align: middle;
+    }*/
+
     /*Media Query Responsive
     https://developer.mozilla.org/es/docs/CSS/Media_queries
     */
@@ -187,7 +198,26 @@ body{
             margin: 0px auto;
         }
 
-       
+        #slider{
+            overflow: hidden;
+            height: 150px;
+        }
+
+        #slider h2{
+            font-size: 30px;
+            line-height:30px;
+            margin-top: 60px;
+      
+        }
+
+    }
+
+   @media (max-width: 548px){
+        #slider h2{
+            font-size: 25px;
+            line-height:30px;
+            margin-top: 50px;
+        }
 
     }
 
