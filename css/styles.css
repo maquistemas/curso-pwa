@@ -6,6 +6,10 @@
     font-family: 'Open Sans', Verdana;
 }
 
+html, body{
+    overflow-x: hidden;
+}
+
 body{
     background: white;
 }
@@ -212,6 +216,28 @@ body{
 
     }
 
+    @media (max-width: 780px){
+        .service, .video {
+            width: 70%;
+            float: none;
+            margin: 0px auto;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .service img {
+            margin-bottom: 10px;
+        }
+
+        .service p, .video p{
+            margin-top: 10px;
+        }
+
+        .video iframe{
+            height: 150px;
+        }
+    }
+
    @media (max-width: 548px){
         #slider h2{
             font-size: 25px;
@@ -231,6 +257,10 @@ body{
             margin-left: 4%;
             margin-right: 4%;
         }
+
+        .service, .video{
+            width: 90%;
+        } 
         
     }
 
