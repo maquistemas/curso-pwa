@@ -55,5 +55,32 @@ self.addEventListener('install', e =>{
 });
 
  //Evento activate
+ //Para que la app funcione sin conexión
+ self.addEventListener('activate', e =>{
+    const cacheWhitelist = [CACHE_NAME];
+
+    e.waitUntil(
+        caches.keys()
+            .then(cacheNames => {
+                return Promise.all(
+                    cacheNames.map(cacheName => {
+                        if(cacheWhitelist.indexOf(cacheName) === -1){
+                            //Borrar elementos que no se necesitan
+                            return caches.delete(cacheName);
+                        }
+
+                    });
+                );
+            })
+            .then(()=>{
+                //Activar cache en dispositivo
+                self.clients.claim();
+            });
+    );
+ });
+
 
  //Evento fetch: para traer actualización desde el servidor
+ //Si no existe en la cache actual cachea lo que tiene que cachear
+
+ 
