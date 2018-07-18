@@ -153,3 +153,66 @@ body{
         opacity: 0.8;
         transform: scale(1.1, 1.1);
     }
+
+    /*Media Query Responsive
+    https://developer.mozilla.org/es/docs/CSS/Media_queries
+    */
+    @media all and (max-width: 1225px){
+        .container{
+            width: 95%;
+        }
+    }
+
+    @media (max-width: 1085px){
+        #main-header{
+            height: 70px;
+            line-height: 65px;
+        }
+        #logo{
+            width: 60%;
+        }
+
+        
+        
+    }
+
+    @media (max-width: 999px){
+        #logo{
+            width: 270px;
+            float: none;
+            margin: 0px auto;
+        }
+        #menu{
+            float: none;
+            margin: 0px auto;
+        }
+
+       
+
+    }
+
+    @media (max-width: 377px){
+        
+        #menu{
+            width: 100%;
+            text-align: center;
+        }
+        #menu ul li{
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+        
+    }
+
+    /*@media (max-width: 345px){*/
+    @media (max-width: 365px){
+        
+        #main-header{
+            height: auto;
+        }
+        #menu ul li{
+            float: none;
+        }
+
+         
+    }
