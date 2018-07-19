@@ -47,10 +47,9 @@ self.addEventListener('install', e =>{
                         .then(()=>{
                             self.skipWaiting();
                         })
-                        .catch(err =>{
-                            console.log('No seha registrado el cache', err);
-                        });
+                        
             })
+            .catch(err =>console.log('No seha registrado el cache', err) )
     );
 });
 
@@ -69,18 +68,29 @@ self.addEventListener('install', e =>{
                             return caches.delete(cacheName);
                         }
 
-                    });
-                );
+                    })
+                )
             })
             .then(()=>{
                 //Activar cache en dispositivo
                 self.clients.claim();
-            });
+            })
     );
  });
 
 
  //Evento fetch: para traer actualización desde el servidor
  //Si no existe en la cache actual cachea lo que tiene que cachear
+self.addEventListener('fetch', e => {
+    e.respondWith(
+        caches.match(e.request)
+            .then(res =>{
+                if(res){
+                    //devuelvo datos desde cache
+                    return res;
+                }
 
- 
+                return fetch(e.request);
+            })
+    );
+});
